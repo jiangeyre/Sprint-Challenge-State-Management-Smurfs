@@ -4,28 +4,19 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 // reducers
-import reducer from './store/reducers/reducer';
-// components
-import SmurfVillage from './components/SmurfVillage';
-import AddSmurf from './components/AddSmurf';
+import { smurfReducer } from './store/reducers/smurfReducer';
+
 // styling
 import "./index.css";
+import App from "./components/App";
 
-// import App from "./components/App";
+const store = createStore(smurfReducer, applyMiddleware(thunk));
 
-const store = createStore(reducer, applyMiddleware(thunk));
-
-function App(){
-    return(
-        <div>
-
-        </div>
-    )
-};
+const rootElement = document.getElementById("root");
 
 ReactDOM.render(
     <Provider store={store}>
         <App />
     </Provider>, 
-    document.getElementById("root")
+    rootElement
 );
