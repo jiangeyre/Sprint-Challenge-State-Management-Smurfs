@@ -2,6 +2,7 @@ import React from 'react';
 import Smurf from './Smurf.js';
 
 const SmurfVillage = (props) => {
+  
   return (
     <div style={{margin: '2% auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
     {
@@ -11,6 +12,6 @@ const SmurfVillage = (props) => {
     }
     </div>
   )
-}
+};
 
 export default SmurfVillage; 

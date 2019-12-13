@@ -10,6 +10,7 @@ import sacrifice from '../img/sacrifice.jpg';
 import elmo from '../img/elmo.jpg';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App" style={{display: 'flex', flexDirection: 'column', alignContent: 'center', justifyContent: 'center', border: '1px solid black', backgroundColor: 'indianred'}}>
@@ -30,7 +31,7 @@ class App extends Component {
       </div>
     );
   }
-}
+};
 
 const mapStateToProps = (state) => ({
   smurfs: state.smurfs

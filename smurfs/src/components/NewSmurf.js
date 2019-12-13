@@ -7,19 +7,22 @@ const NewSmurf = (props) => {
     name: "",
     age: 0,
     height: ""
-  })
-  const handleChange = (evt) => {
-    setNewSmurf({...newSmurf, [evt.target.name]: evt.target.value})
-  }
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
+  });
+
+  const handleChange = (e) => {
+    setNewSmurf({...newSmurf, [e.target.name]: e.target.value})
+  };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
     props.addSmurf(newSmurf);
     setNewSmurf({
-    name: "",
-    age: 0,
-    height: ""
-  })
-  }
+        name: "",
+        age: 0,
+        height: ""
+    })
+  };
+
   return (
     <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', alignContent: 'center', justifyContent: 'center', width: 600,border: '3px solid black'}}>
         <p>Enter a name:</p>
@@ -33,7 +36,7 @@ const NewSmurf = (props) => {
         </div>
     </form>
   )
-}
+};
 
 
 export default connect((state) => ({}), { addSmurf })(NewSmurf); 

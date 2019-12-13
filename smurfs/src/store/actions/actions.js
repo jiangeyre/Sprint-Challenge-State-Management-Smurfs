@@ -14,7 +14,7 @@ export const getSmurfs = data => dispatch => {
     .catch(err => {
       dispatch({type: "CALL_FAILURE", payload: err.response})
     });
-}
+};
 
 export const addSmurf = data => dispatch => {
   axios
@@ -25,7 +25,7 @@ export const addSmurf = data => dispatch => {
     .catch(err => {
       dispatch({type: "POST_FAILURE", payload: err.response})
     })
-}
+};
 
 export const removeSmurf = data => dispatch => {
   axios
@@ -36,4 +36,4 @@ export const removeSmurf = data => dispatch => {
     .catch(err => {
       dispatch({type: "CALL_FAILURE", payload: err.response})
     });
-} 
+};
