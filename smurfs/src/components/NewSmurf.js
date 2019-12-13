@@ -29,7 +29,7 @@ const NewSmurf = (props) => {
         <p>Enter a height:</p>
         <input required type="text" name="height" placeholder="Height." value={newSmurf.height} onChange={handleChange} style={{fontFamily: 'Barlow, sans-serif', margin: '1% auto'}} />
         <div>
-            <button style={{fontFamily: 'Barlow, sans-serif', width: 250}}>Add Smurf to Village</button>
+            <button style={{fontFamily: 'Barlow, sans-serif', width: 200}}>Add Smurf to Village</button>
         </div>
     </form>
   )

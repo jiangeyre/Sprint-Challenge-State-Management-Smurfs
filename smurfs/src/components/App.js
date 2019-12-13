@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App" style={{display: 'flex', flexDirection: 'column', alignContent: 'center', justifyContent: 'center', border: '1px solid black', backgroundColor: 'indianred'}}>
-          <p style={{color: 'maroon', fontWeight: 900, fontSize:'2.5rem'}}>Smurfs Available for Sacrifice:</p>
+          <p style={{fontWeight: 900, fontSize:'2.5rem'}}>Smurfs Available for Sacrifice:</p>
           <div>
             <img src={sacrifice} alt="Ironman Tony Stark crying tears sacrifice" style={{width: 500}} />
           </div>
