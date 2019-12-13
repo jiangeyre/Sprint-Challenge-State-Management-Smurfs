@@ -21,11 +21,16 @@ const NewSmurf = (props) => {
   })
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <input required type="text" name="name" placeholder="name" value={newSmurf.name} onChange={handleChange} />
-      <input required type="number" name="age" placeholder="age" value={newSmurf.age} onChange={handleChange} />
-      <input required type="text" name="height" placeholder="height" value={newSmurf.height} onChange={handleChange} />
-      <button>Add Smurf to Village</button>
+    <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', alignContent: 'center', justifyContent: 'center', width: 600,border: '3px solid black'}}>
+        <p>Enter a name:</p>
+        <input required type="text" name="name" placeholder="Name." value={newSmurf.name} onChange={handleChange} style={{fontFamily: 'Barlow, sans-serif', margin: '1% auto'}} />
+        <p>Enter the age:</p>
+        <input required type="number" name="age" placeholder="Age." value={newSmurf.age} onChange={handleChange} style={{fontFamily: 'Barlow, sans-serif', margin: '1% auto'}} />
+        <p>Enter a height:</p>
+        <input required type="text" name="height" placeholder="Height." value={newSmurf.height} onChange={handleChange} style={{fontFamily: 'Barlow, sans-serif', margin: '1% auto'}} />
+        <div>
+            <button style={{fontFamily: 'Barlow, sans-serif', width: 250}}>Add Smurf to Village</button>
+        </div>
     </form>
   )
 }
